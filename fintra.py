@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import csv_file_creation as cfc
 
+cfc.create_file()
 inc = pd.read_csv('income.csv', index_col=0)
 exp = pd.read_csv('outgo.csv', index_col=0)
 
