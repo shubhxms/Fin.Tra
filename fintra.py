@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-inc = pd.read_csv('df.csv', index_col=0)
+inc = pd.read_csv('income.csv', index_col=0)
 exp = pd.read_csv('outgo.csv', index_col=0)
 
 while True:
@@ -47,7 +47,7 @@ while True:
         
     elif cmd == 'exit':
         print('Saving and exiting... \nDone')
-        inc.to_csv('df.csv')
+        inc.to_csv('income.csv')
         exp.to_csv('outgo.csv')
         break       
     else:

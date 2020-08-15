@@ -8,9 +8,8 @@ def create_file():
     except FileNotFoundError:
         outgo = open("outgo.csv",'w')
         writer = csv.writer(outgo, delimiter=',')
-        outgo_header = ['MONTHS','purchase','electricity','telecom','rent','interest','depri','salary','wages','maintenance','tax','travelling','advt','capital-expenses','inventory-costs','insurance','misc']
+        outgo_header = ['MONTHS','Purchase','Electricity','Telecom','Rent','Interest','Depreciation','Salary','Wages','Maintenance','Tax','Travelling','Advertisement','Inventory Costs','Insurance','Miscellaneous']
         writer.writerow(outgo_header)
-        #months = ["Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec", "Jan","Feb","Mar"]months = ["April","May","June","July","August","September","October","November","December", "January","February","March"]
         months = ["Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec", "Jan","Feb","Mar"]
         for month in months:
             record = [month]
@@ -23,10 +22,13 @@ def create_file():
     except FileNotFoundError:
         income = open("income.csv", 'w')
         writer = csv.writer(income, delimiter=',')
-        income_header = ['MONTHS','sales','interest','rent','bad-debts','misc']
+        income_header = ['MONTHS','Sales','Interest','Rent','Bad Debts Recovered','Miscellaneous']
         writer.writerow(income_header)
         months = ["Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec", "Jan","Feb","Mar"]
         for month in months:
             record = [month]
             writer.writerow(record)
         income.close()
+
+if __name__ == '__main__':
+    create_file()
