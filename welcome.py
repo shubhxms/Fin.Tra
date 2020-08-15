@@ -4,7 +4,7 @@ def welcome():
     print("Welcome to FinTra λ\nOne-Stop CLI-Based Finance-Tracker")
 
 login_token = ""
- def login():   
+def login():   
     try:
         pwd_file = open("pwd.txt",'r')
         pwd = gp.getpass("Enter password: ")

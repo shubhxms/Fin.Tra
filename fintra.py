@@ -1,16 +1,13 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import csv_file_creation as cfc
-from getpass import  getpass
-import welcome as wc
 
 cfc.create_file()
 file = open('help.txt','r')
 inc = pd.read_csv('income.csv', index_col=0)
 exp = pd.read_csv('outgo.csv', index_col=0)
-
-wc.login()
-while (wc.login_token = 'Success'):
+print("Welcome to FinTra λ\nOne-Stop CLI-Based Finance-Tracker")
+while True:
     mnt = ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar']
     cmd = input('Fintra λ ')
     cmdl = cmd.split()
@@ -70,7 +67,6 @@ while (wc.login_token = 'Success'):
         print('Saving and exiting... \nDone')
         inc.to_csv('income.csv')
         exp.to_csv('outgo.csv')
-        wc.os.exit()
         break       
     else:
         print("Invalid Input, please try again")
