@@ -1,7 +1,11 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import csv_file_creation as cfc
-
+import os
+try:
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import csv_file_creation as cfc
+except:
+    print("Please install the required modules.")
+    os.exit()
 cfc.create_file()
 file = open('help.txt','r')
 inc = pd.read_csv('income.csv', index_col=0)
