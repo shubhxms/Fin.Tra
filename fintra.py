@@ -13,7 +13,7 @@ def login():
     print("Fintra Login")
     uname = input("Enter your username: ")
     passwd = getpass("Enter your password: ")
-login()
+
 
 usr = user_data_file.readline()
 pwd = user_data_file.readline()
