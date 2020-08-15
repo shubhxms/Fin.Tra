@@ -2,13 +2,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import csv_file_creation as cfc
 from getpass import  getpass
+import welcome as wc
 
 cfc.create_file()
 file = open('help.txt','r')
 inc = pd.read_csv('income.csv', index_col=0)
 exp = pd.read_csv('outgo.csv', index_col=0)
 
-while True:
+wc.login()
+while (wc.login_token = 'Success'):
     mnt = ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar']
     cmd = input('Fintra λ ')
     cmdl = cmd.split()
@@ -68,6 +70,7 @@ while True:
         print('Saving and exiting... \nDone')
         inc.to_csv('income.csv')
         exp.to_csv('outgo.csv')
+        wc.os.exit()
         break       
     else:
         print("Invalid Input, please try again")
