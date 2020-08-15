@@ -20,13 +20,13 @@ while True:
             inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
             print(inc)
         elif cmdl[5] == '-':    
-            inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+            inc.loc[cmdl[2],cmdl[4]] -= int(cmdl[6])
             print(inc)
         elif cmdl[5] == '*':    
-            inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+            inc.loc[cmdl[2],cmdl[4]] *= int(cmdl[6])
             print(inc)
         elif cmdl[5] == '/':    
-            inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+            inc.loc[cmdl[2],cmdl[4]] /= int(cmdl[6])
             print(inc)        
     elif cmdl[0] == 'expense':
         if cmdl[5] == '=':
@@ -35,6 +35,15 @@ while True:
         elif cmdl[5] == '+':    
             exp.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
             print(exp)
+        elif cmdl[5] == '-':    
+            exp.loc[cmdl[2],cmdl[4]] -= int(cmdl[6])
+            print(exp)
+        elif cmdl[5] == '*':    
+            exp.loc[cmdl[2],cmdl[4]] *= int(cmdl[6])
+            print(exp)
+        elif cmdl[5] == '/':    
+            exp.loc[cmdl[2],cmdl[4]] /= int(cmdl[6])
+            print(exp)             
             
     elif cmd == 'save':
         inc.to_csv('income.csv')
