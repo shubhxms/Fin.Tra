@@ -35,7 +35,15 @@ if usr == (str(uname)+'\n') and pwd == (str(passwd)+'\n'):
             elif cmdl[5] == '+':    
                 inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
                 print(inc)
-        
+            elif cmdl[5] == '-':    
+                inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+                print(inc)
+            elif cmdl[5] == '*':    
+                inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+                print(inc)
+            elif cmdl[5] == '/':    
+                inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+                print(inc)        
         elif cmdl[0] == 'expense':
             if cmdl[5] == '=':
                 exp.loc[cmdl[2],cmdl[4]] = int(cmdl[6])
@@ -43,6 +51,15 @@ if usr == (str(uname)+'\n') and pwd == (str(passwd)+'\n'):
             elif cmdl[5] == '+':    
                 exp.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
                 print(exp)
+            elif cmdl[5] == '-':    
+                inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+                print(inc)
+            elif cmdl[5] == '*':    
+                inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+                print(inc)
+            elif cmdl[5] == '/':    
+                inc.loc[cmdl[2],cmdl[4]] += int(cmdl[6])
+                print(inc) 
 
         elif cmd == 'show':
             print('Income Table:\n',inc)
