@@ -1,5 +1,5 @@
 List of commands used in FinTra
-Note: FinTra commands are case-sensitive, be careful by typing any commands.
+Note: FinTra commands are case-sensitive, be careful while typing any commands.
 
 WARNING: month and category should be capitalised as shown in the example below and separation from spaces and colon is required.
 table_name : Month : Category = amount	Usage: entering the value     Example: income : Apr : Sales = 101
