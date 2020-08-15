@@ -11,6 +11,7 @@ file = open('help.txt','r')
 inc = pd.read_csv('income.csv', index_col=0)
 exp = pd.read_csv('outgo.csv', index_col=0)
 print("Welcome to FinTra λ\nOne-Stop CLI-Based Finance-Tracker")
+print("All the figures mentioned by the user are the currency of the user's country.")
 while True:
     mnt = ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar']
     cmd = input('Fintra λ ')
@@ -47,7 +48,11 @@ while True:
             print(exp)
         elif cmdl[5] == '/':    
             exp.loc[cmdl[2],cmdl[4]] /= int(cmdl[6])
-            print(exp)             
+            print(exp)  
+
+    elif cmd == 'credits':
+        print("Developed by:")
+        print("Sneh Gupta\tShubham Shah\tAnushree Rane")           
             
     elif cmd == 'save':
         inc.to_csv('income.csv')
@@ -55,6 +60,8 @@ while True:
 
     elif cmd == 'help':
         print(file.read())
+        print("Developed by:")
+        print("Sneh Gupta\tShubham Shah\tAnushree Rane")
 
     elif cmd == 'show':
         print('Income Table:\n',inc)
